@@ -1,0 +1,3 @@
+{"id": "val_001", "field_name": "PAN Number", "validations": ["Mandatory", "Exactly 10 characters", "Format: 5 uppercase letters, 4 digits, 1 uppercase letter"], "ground_truth_checks": ["has_positive", "has_negative", "has_boundary", "has_null", "has_table"]}
+{"id": "val_002", "field_name": "Age", "validations": ["Mandatory", "Numeric only", "Minimum 18", "Maximum 100"], "ground_truth_checks": ["has_positive", "has_negative", "has_boundary", "has_null", "has_table"]}
+{"id": "val_003", "field_name": "GSTIN", "validations": ["Mandatory", "Exactly 15 characters", "Alphanumeric", "First 2 digits are state code (01-37)"], "ground_truth_checks": ["has_positive", "has_negative", "has_boundary", "has_null", "has_table"]}

@@ -1,0 +1,59 @@
+_base_: ../_base_/default.yaml
+
+model:
+  optimizer_backend: openai_chat
+  target_backend: openai_chat
+
+  # Same model for optimizer and target.
+  optimizer: gpt-4o
+  target: gpt-4o
+
+  # Required by this model configuration.
+  reasoning_effort: ""
+
+  azure_openai_auth_mode: api_key
+
+train:
+  batch_size: 8
+  accumulation: 1
+  num_epochs: 4
+  seed: 42
+
+gradient:
+  minibatch_size: 4
+  merge_batch_size: 4
+  analyst_workers: 4
+  failure_only: false
+
+optimizer:
+  learning_rate: 4
+  min_learning_rate: 2
+  lr_scheduler: cosine
+
+  skill_update_mode: patch
+
+  # 18 training examples — cap slow_update_samples to match.
+  use_slow_update: true
+  slow_update_samples: 18
+
+  # Keep first experiment focused on ordinary skill optimization.
+  use_meta_skill: false
+
+evaluation:
+  use_gate: true
+  gate_metric: hard
+  sel_env_num: 8
+  test_env_num: 8
+  eval_test: true
+
+env:
+  name: social_media
+  skill_init: skillopt/envs/social_media/skills/initial.md
+
+  split_mode: split_dir
+  split_dir: data/social_media_split
+
+  workers: 4
+  max_completion_tokens: 4096
+
+  limit: 0

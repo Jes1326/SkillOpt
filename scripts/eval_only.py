@@ -125,6 +125,11 @@ def _register_builtins() -> None:
         _ENV_REGISTRY["swebench"] = SWEBenchAdapter
     except ImportError:
         pass
+    try:
+        from skillopt.envs.social_media.adapter import SocialMediaAdapter
+        _ENV_REGISTRY["social_media"] = SocialMediaAdapter
+    except ImportError:
+        pass
 
 
 def get_adapter(cfg: dict):

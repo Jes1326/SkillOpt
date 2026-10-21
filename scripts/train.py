@@ -18,11 +18,15 @@ import argparse
 import datetime
 import os
 import sys
+from dotenv import load_dotenv
+
 
 # Ensure the project root is on sys.path so ``import skillopt`` works
 # regardless of where the script is invoked from.
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 _PROJECT_ROOT = os.path.dirname(_SCRIPT_DIR)
+load_dotenv(os.path.join(_PROJECT_ROOT, ".env"))
+
 if _PROJECT_ROOT not in sys.path:
     sys.path.insert(0, _PROJECT_ROOT)
 
@@ -98,6 +102,16 @@ def _register_builtins() -> None:
     try:
         from skillopt.envs.swebench.adapter import SWEBenchAdapter
         _ENV_REGISTRY["swebench"] = SWEBenchAdapter
+    except ImportError:
+        pass
+    try:
+        from skillopt.envs.testdatagen.adapter import TestDataGenAdapter
+        _ENV_REGISTRY["testdatagen"] = TestDataGenAdapter
+    except ImportError:
+        pass
+    try:
+        from skillopt.envs.social_media.adapter import SocialMediaAdapter
+        _ENV_REGISTRY["social_media"] = SocialMediaAdapter
     except ImportError:
         pass
 

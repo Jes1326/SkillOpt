@@ -1,0 +1,14 @@
+{
+  "benchmark": "social_media",
+  "description": "Self-optimizing social media content strategy benchmark.",
+  "counts": {
+    "train": 18,
+    "val": 3,
+    "test": 3
+  },
+  "rules": {
+    "hard_score": "1 only when every evaluator check passes",
+    "soft_score": "fraction of evaluator checks passed",
+    "test_is_held_out": true
+  }
+}

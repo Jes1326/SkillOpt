@@ -11,6 +11,8 @@
 
 > 📖 **For installation, data preparation, training/eval commands, configuration, and framework internals, start with the versioned [SkillOpt documentation](https://github.com/microsoft/SkillOpt/blob/main/docs/index.md). A concise rendered overview is available in the [Documentation & Reproduction Guide](https://microsoft.github.io/SkillOpt/docs/guideline.html), and longer-form engineering analysis appears on the [Technical Blog](https://microsoft.github.io/SkillOpt/blog/). We also maintain a [Changelog](CHANGELOG.md) for released and unreleased changes.**
 
+> 🌟 **Custom Experiment Showcase:** See [**`EXPERIMENT_SHOWCASE.md`**](EXPERIMENT_SHOWCASE.md) for an empirical study on applying SkillOpt to **Social Media Strategy** and **QA Test Data Generation**, complete with side-by-side prompt diffs, before-vs-after LLM outputs, and benchmark metrics!
+
 ---
 
 ## News 🔥🔥🔥

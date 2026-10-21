@@ -19,6 +19,10 @@ data/*
 !data/spreadsheetbench_id_split/**
 !data/alfworld_path_split/
 !data/alfworld_path_split/**
+!data/social_media_split/
+!data/social_media_split/**
+!data/testdatagen/
+!data/testdatagen/**
 outputs/
 logs/
 external/
