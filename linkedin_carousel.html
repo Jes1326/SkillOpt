@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillOpt LinkedIn Carousel (3 Slides)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+        background: #0f172a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .slide-container {
+        display: block !important;
+      }
+      .slide-card {
+        page-break-after: always;
+        break-after: page;
+        width: 1080px !important;
+        height: 1080px !important;
+        min-height: 1080px !important;
+        max-height: 1080px !important;
+        margin: 0 auto !important;
+        border-radius: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased p-4 md:p-8 flex flex-col items-center">
+
+  <!-- Header Controls -->
+  <div class="no-print w-full max-w-4xl flex items-center justify-between mb-6 bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl">
+    <div>
+      <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400 bg-clip-text text-transparent">
+        LinkedIn Carousel Deck (3 Slides)
+      </h1>
+      <p class="text-xs text-slate-400">Preview slides below. Use buttons or arrow keys to navigate, or click Export for LinkedIn PDF.</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="window.print()" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl text-xs font-semibold shadow-md transition-all flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+        Export as PDF for LinkedIn
+      </button>
+    </div>
+  </div>
+
+  <!-- Interactive Slide Viewer -->
+  <div class="w-full max-w-4xl flex flex-col items-center">
+
+    <!-- Carousel Container -->
+    <div class="slide-container w-full relative">
+
+      <!-- SLIDE 1: How SkillOpt Works -->
+      <div id="slide-1" class="slide-card w-full aspect-square md:aspect-[4/5] max-h-[820px] bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-32 -right-32 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Slide Header -->
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider">
+              Slide 1 of 3 • Architecture
+            </span>
+            <span class="text-xs text-slate-500 font-mono">Microsoft SkillOpt</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+            How Can an AI Optimize Its Own Prompts?
+          </h2>
+          <p class="text-slate-400 text-sm md:text-base mt-2">
+            Instead of updating neural weights, <span class="text-blue-400 font-semibold">SkillOpt</span> treats the Markdown System Prompt as the trainable state using <span class="text-emerald-400 font-semibold">Textual Gradient Descent</span>.
+          </p>
+        </div>
+
+        <!-- Slide Body / Flowchart -->
+        <div class="relative z-10 my-auto py-6 grid grid-cols-1 md:grid-cols-5 gap-3 items-center">
+          
+          <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 flex flex-col items-center text-center shadow-lg">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm mb-2">01</div>
+            <h4 class="font-bold text-sm text-white">Target Rollout</h4>
+            <p class="text-[12px] text-slate-400 mt-1">GPT-4o executes task briefs using current skill.</p>
+          </div>
+
+          <div class="hidden md:flex justify-center text-slate-600 font-bold">➔</div>
+
+          <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 flex flex-col items-center text-center shadow-lg">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm mb-2">02</div>
+            <h4 class="font-bold text-sm text-white">Strict Evaluator</h4>
+            <p class="text-[12px] text-slate-400 mt-1">800+ lines check schema, signals, & ban 16+ cliches.</p>
+          </div>
+
+          <div class="hidden md:flex justify-center text-slate-600 font-bold">➔</div>
+
+          <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 flex flex-col items-center text-center shadow-lg">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm mb-2">03</div>
+            <h4 class="font-bold text-sm text-white">Analyst Critique</h4>
+            <p class="text-[12px] text-slate-400 mt-1">Parallel agents diagnose root-cause prompt failures.</p>
+          </div>
+
+        </div>
+
+        <!-- Bottom Gate card -->
+        <div class="relative z-10 bg-slate-950/70 border border-emerald-500/30 rounded-2xl p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">04</div>
+            <div>
+              <h5 class="text-xs font-bold text-emerald-300">Validation Gate (Zero Regressions)</h5>
+              <p class="text-[12px] text-slate-400">Patches are only merged if held-out test score strictly improves.</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono bg-emerald-950 text-emerald-400 border border-emerald-800 px-3 py-1 rounded-full font-semibold">
+            66.7% ➔ 100% Pass
+          </span>
+        </div>
+
+        <!-- Slide Footer -->
+        <div class="relative z-10 flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+          <span>github.com/Jes1326/SkillOpt</span>
+          <span>Swipe for Prompt Diff ➔</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: Prompt Before vs After -->
+      <div id="slide-2" class="slide-card hidden w-full aspect-square md:aspect-[4/5] max-h-[820px] bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-32 -left-32 w-80 h-80 bg-red-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Slide Header -->
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider">
+              Slide 2 of 3 • System Prompt Diff
+            </span>
+            <span class="text-xs text-slate-500 font-mono">Autonomous Evolution</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+            Original Prompt vs. Evolved Prompt
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">
+            SkillOpt transformed vague human adjectives into concrete operational constraints.
+          </p>
+        </div>
+
+        <!-- Side-by-Side Prompt Cards -->
+        <div class="relative z-10 my-auto grid grid-cols-1 md:grid-cols-2 gap-4 py-3">
+          
+          <!-- Before Card -->
+          <div class="bg-red-950/20 border border-red-900/40 rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-red-400 flex items-center gap-1.5 uppercase tracking-wide">
+                  <span class="w-2 h-2 rounded-full bg-red-500"></span> Before (Naive Prompt)
+                </span>
+                <span class="text-[11px] font-mono text-red-400/70">initial.md</span>
+              </div>
+              <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-[12px] font-mono text-slate-400 leading-relaxed space-y-2">
+                <p class="text-slate-300"># Social Media Content Strategist</p>
+                <p>You are a social media strategist. Turn the brief into a content package.</p>
+                <p class="text-red-300 bg-red-950/50 p-1.5 rounded border border-red-900/50">
+                  "Try to make content engaging and specific. Think about what works on the platform. Avoid generic filler."
+                </p>
+                <p class="text-slate-500">→ Vague instructions. Model defaulted to generic cliches and self-promotional CTAs.</p>
+              </div>
+            </div>
+            <div class="mt-3 text-[12px] text-red-400 font-medium">
+              ❌ Failed Keyword & CTA Alignment (66.7% score)
+            </div>
+          </div>
+
+          <!-- After Card -->
+          <div class="bg-emerald-950/20 border border-emerald-900/40 rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-emerald-400 flex items-center gap-1.5 uppercase tracking-wide">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span> After (Evolved by SkillOpt)
+                </span>
+                <span class="text-[11px] font-mono text-emerald-400/70">best_skill.md</span>
+              </div>
+              <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-[12px] font-mono text-slate-300 leading-relaxed space-y-1.5">
+                <p class="text-emerald-400 font-semibold">• Strengthen hooks with direct audience friction & urgency.</p>
+                <p class="text-emerald-400 font-semibold">• Align CTAs strictly to brief objective (learn/save vs buy) rather than follow requests.</p>
+                <p class="text-emerald-400 font-semibold">• Structure scripts progressively (split-screen demo) to sustain retention.</p>
+                <p class="text-emerald-400 font-semibold">• Address all constraints without over-simplification.</p>
+              </div>
+            </div>
+            <div class="mt-3 text-[12px] text-emerald-400 font-medium flex items-center gap-2">
+              <span>✅ 100% Hard Pass Rate across all 22+ checks</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slide Footer -->
+        <div class="relative z-10 flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+          <span>github.com/Jes1326/SkillOpt</span>
+          <span>Swipe for Output Showdown ➔</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: Output Comparison on sm19 -->
+      <div id="slide-3" class="slide-card hidden w-full aspect-square md:aspect-[4/5] max-h-[820px] bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-32 -right-32 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Slide Header -->
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider">
+              Slide 3 of 3 • Real Output Showdown
+            </span>
+            <span class="text-xs text-slate-500 font-mono">Task: TikTok Editing Shortcuts</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+            Before vs. After Output Quality
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">
+            Same brief. Same model (GPT-4o). Radically different execution quality.
+          </p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="relative z-10 my-auto space-y-3 py-2">
+          
+          <!-- Row 1: The Hook -->
+          <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5 flex flex-col md:flex-row gap-3 md:items-center justify-between">
+            <div class="md:w-1/4">
+              <span class="text-xs font-bold uppercase tracking-wider text-blue-400">01. The Hook</span>
+            </div>
+            <div class="md:w-3/8 text-[12px] text-red-300 bg-red-950/30 p-2 rounded-lg border border-red-900/30">
+              <span class="font-bold">Before:</span> "'Want to save HOURS editing? Here are 3 time-saving shortcuts...'" <i>(Generic, quoted)</i>
+            </div>
+            <div class="md:w-3/8 text-[12px] text-emerald-300 bg-emerald-950/30 p-2 rounded-lg border border-emerald-900/30">
+              <span class="font-bold">After:</span> "Stop wasting time on video edits – here are 3 pro shortcuts you'll wish you knew yesterday!"
+            </div>
+          </div>
+
+          <!-- Row 2: The Script -->
+          <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5 flex flex-col md:flex-row gap-3 md:items-center justify-between">
+            <div class="md:w-1/4">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">02. Script Flow</span>
+            </div>
+            <div class="md:w-3/8 text-[12px] text-red-300 bg-red-950/30 p-2 rounded-lg border border-red-900/30">
+              <span class="font-bold">Before:</span> Smiling at camera, vague clips, ends with a static logo screen.
+            </div>
+            <div class="md:w-3/8 text-[12px] text-emerald-300 bg-emerald-950/30 p-2 rounded-lg border border-emerald-900/30">
+              <span class="font-bold">After:</span> Split-screen showing "slow way" vs "fast way" with actual hotkeys (C, S, Alt+Drag).
+            </div>
+          </div>
+
+          <!-- Row 3: Call to Action -->
+          <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5 flex flex-col md:flex-row gap-3 md:items-center justify-between">
+            <div class="md:w-1/4">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">03. The CTA</span>
+            </div>
+            <div class="md:w-3/8 text-[12px] text-red-300 bg-red-950/30 p-2 rounded-lg border border-red-900/30">
+              <span class="font-bold">Before:</span> "Follow Edit Fast for more practical editing tips!" ❌ <i>(Self-promotional)</i>
+            </div>
+            <div class="md:w-3/8 text-[12px] text-emerald-300 bg-emerald-950/30 p-2 rounded-lg border border-emerald-900/30">
+              <span class="font-bold">After:</span> "Learn these shortcuts today and save time on your next edit – start now!" ✅
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slide Footer -->
+        <div class="relative z-10 flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+          <span>github.com/Jes1326/SkillOpt</span>
+          <span class="text-emerald-400 font-semibold">100% Hard Pass Rate Achieved</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="no-print flex items-center gap-4 mt-6">
+      <button onclick="prevSlide()" class="p-3 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded-full transition shadow-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+      </button>
+
+      <div class="flex items-center gap-2">
+        <button onclick="goToSlide(1)" id="dot-1" class="w-8 h-2 rounded-full bg-blue-500 transition-all"></button>
+        <button onclick="goToSlide(2)" id="dot-2" class="w-2.5 h-2 rounded-full bg-slate-700 hover:bg-slate-600 transition-all"></button>
+        <button onclick="goToSlide(3)" id="dot-3" class="w-2.5 h-2 rounded-full bg-slate-700 hover:bg-slate-600 transition-all"></button>
+      </div>
+
+      <button onclick="nextSlide()" class="p-3 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded-full transition shadow-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 3;
+
+    function updateSlides() {
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        const dot = document.getElementById(`dot-${i}`);
+        if (i === currentSlide) {
+          slide.classList.remove('hidden');
+          dot.classList.remove('w-2.5', 'bg-slate-700');
+          dot.classList.add('w-8', 'bg-blue-500');
+        } else {
+          slide.classList.add('hidden');
+          dot.classList.remove('w-8', 'bg-blue-500');
+          dot.classList.add('w-2.5', 'bg-slate-700');
+        }
+      }
+    }
+
+    function nextSlide() {
+      currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+      updateSlides();
+    }
+
+    function prevSlide() {
+      currentSlide = currentSlide > 1 ? currentSlide - 1 : totalSlides;
+      updateSlides();
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      updateSlides();
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
+
